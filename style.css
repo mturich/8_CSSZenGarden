@@ -1,0 +1,246 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+/* basic elements */
+
+:root {
+  --marginLeftRight: 2rem;
+  --paddingLeftRight: 2rem;
+  --marginTopBottom: 0.5rem;
+  --maxWidthElemP: 80%;
+  --fontSizeSubtitle: 1.4rem;
+  --fontSizeTitle: 2rem;
+}
+
+#css-zen-garden,
+h3 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page-wrapper {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #0a0a0a;
+  padding: auto var(--paddingLeftRight);
+  width: 100%;
+}
+
+h1,
+h2 {
+  background-color: rgb(248, 221, 221);
+  text-align: center;
+  margin: 0;
+  padding: 1.5rem 0;
+}
+
+h1 {
+  font-size: var(--fontSizeTitle);
+  font-weight: 400;
+  padding-bottom: 0;
+}
+
+h2 {
+  font-size: var(--fontSizeSubtitle);
+  font-weight: 200;
+  padding-top: var(--marginTopBottom);
+  text-transform: uppercase;
+  margin-bottom: var(--marginTopBottom);
+}
+
+h3 {
+  padding-block: var(--marginTopBottom);
+  font-size: var(--fontSizeSubtitle);
+  font-weight: 600;
+  padding-left: 2rem;
+  color: #bb5555;
+}
+
+p {
+  max-width: min(80%, 60ch);
+
+  margin-block: var(--marginTopBottom);
+  padding: 0.5rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  padding-left: 3rem;
+}
+
+.summary {
+  text-align: center;
+  font-size: 0.8rem;
+}
+.summary p {
+  max-width: min(80%, 60ch);
+  text-align: center;
+  padding: 0.1rem 0;
+  margin: 0 auto;
+}
+
+.explanation,
+.benefits {
+  text-align: right;
+  padding-right: 3rem;
+  padding-left: 0;
+}
+/* .preamble,
+.participation,
+*/
+
+.requirements {
+  max-width: 80%;
+  columns: 300px;
+  margin: 2rem auto;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: min(80%, var(--maxWidthElemP));
+
+  padding: 1rem 0;
+  margin-block: var(--marginTopBottom);
+  margin-left: auto;
+  margin-right: auto;
+
+  border: solid 1px black;
+  border-left: none;
+  border-right: none;
+}
+
+footer a {
+  padding: 0 0.4em;
+  color: #bb5555;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+}
+
+.sidebar .wrapper {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.sidebar h3 {
+  font-family: 'Style Script', cursive;
+  padding: 0;
+}
+
+.wrapper div {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.wrapper ul {
+  margin: 0.5rem 0;
+  padding: 0 0.5rem;
+}
+
+.wrapper li {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  padding: 0.1em 0;
+}
+
+/*********************** MEDIA QUERIE 
+*
+*
+*
+*
+* ********************MEDIA QUERIE  */
+
+@media (min-width: 50em) {
+  :root {
+    --marginLeftRight: 2rem;
+    --paddingLeftRight: 2rem;
+    --marginTopBottom: 2rem;
+    --maxWidthElemP: 80%;
+  }
+
+  * {
+    transition: 0.5s;
+  }
+
+  h1,
+  h2 {
+    background-color: rgb(226, 248, 221);
+    padding: 4rem 0;
+    transition: 200ms;
+  }
+
+  h1 {
+    font-size: 5rem;
+    padding-bottom: 0;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    padding-top: 1rem;
+  }
+
+  h3 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  p {
+    padding: 0 1rem;
+    width: 75ch;
+    margin-block: 1rem;
+  }
+
+  .design-selection {
+    min-width: 500px;
+  }
+  .design-archives,
+  .zen-resources {
+    min-width: 200px;
+  }
+
+  .footer {
+    width: 100%;
+    max-width: 75ch;
+  }
+
+  .sidebar .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+
+  .sidebar .wrapper > * {
+    flex-basis: calc(calc(900px - 100%) * 999);
+    flex-grow: 1;
+  }
+
+  .sidebar h3 {
+    font-family: 'Style Script', cursive;
+  }
+
+  .wrapper div {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wrapper li {
+    padding: 0.2em 0;
+  }
+  .design-selection ul {
+    margin-left: 1rem;
+  }
+}
